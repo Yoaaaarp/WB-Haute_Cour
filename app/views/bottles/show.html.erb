@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @bottle.price %>
+</p>
+
+<p>
+  <strong>Stock:</strong>
+  <%= @bottle.stock %>
+</p>
+
+<p>
+  <strong>Capacity:</strong>
+  <%= @bottle.capacity %>
+</p>
+
+<%= link_to 'Edit', edit_bottle_path(@bottle) %> |
+<%= link_to 'Back', bottles_path %>

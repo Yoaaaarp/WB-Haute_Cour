@@ -1,0 +1,8 @@
+rails g scaffold User name:string pwd:string admin:integer
+rails g scaffold Address street:string city:string NPA:integer canton:string country:string
+rails g scaffold Event title:string text:string beginAt:datetime
+rails g scaffold Order
+rails g scaffold Status name:string
+rails g scaffold Bottle price:float stock:integer capacity:float
+rails g scaffold Wine name:string desc:string vineyard:string grape:string
+rails g scaffold Category name:string
