@@ -5,6 +5,7 @@ class CreateWines < ActiveRecord::Migration
       t.string :desc
       t.string :vineyard
       t.string :grape
+      t.string :image
 
       t.timestamps null: false
     end

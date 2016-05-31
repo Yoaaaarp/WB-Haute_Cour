@@ -11,17 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160517135445) do
-
-  create_table "addresses", force: :cascade do |t|
-    t.string   "street",     limit: 255
-    t.string   "city",       limit: 255
-    t.integer  "NPA",        limit: 4
-    t.string   "canton",     limit: 255
-    t.string   "country",    limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
+ActiveRecord::Schema.define(version: 20160531142434) do
 
   create_table "bottles", force: :cascade do |t|
     t.float    "price",      limit: 24
@@ -29,6 +19,7 @@ ActiveRecord::Schema.define(version: 20160517135445) do
     t.float    "capacity",   limit: 24
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
+    t.integer  "wine_id",    limit: 4
   end
 
   create_table "categories", force: :cascade do |t|
@@ -41,13 +32,24 @@ ActiveRecord::Schema.define(version: 20160517135445) do
     t.string   "title",      limit: 255
     t.string   "text",       limit: 255
     t.datetime "beginAt"
+    t.string   "image",      limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
 
+  create_table "links", force: :cascade do |t|
+    t.integer  "order_id",   limit: 4
+    t.integer  "bottle_id",  limit: 4
+    t.integer  "number",     limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
   create_table "orders", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.integer  "status_id",  limit: 4
+    t.integer  "user_id",    limit: 4
   end
 
   create_table "statuses", force: :cascade do |t|
@@ -60,17 +62,23 @@ ActiveRecord::Schema.define(version: 20160517135445) do
     t.string   "name",       limit: 255
     t.string   "pwd",        limit: 255
     t.integer  "admin",      limit: 4
+    t.string   "street",     limit: 255
+    t.string   "city",       limit: 255
+    t.integer  "NPA",        limit: 4
+    t.string   "canton",     limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
 
   create_table "wines", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.string   "desc",       limit: 255
-    t.string   "vineyard",   limit: 255
-    t.string   "grape",      limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string   "name",        limit: 255
+    t.string   "desc",        limit: 255
+    t.string   "vineyard",    limit: 255
+    t.string   "grape",       limit: 255
+    t.string   "image",       limit: 255
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.integer  "category_id", limit: 4
   end
 
 end

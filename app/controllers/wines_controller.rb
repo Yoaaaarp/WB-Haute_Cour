@@ -15,16 +15,19 @@ class WinesController < ApplicationController
   # GET /wines/new
   def new
     @wine = Wine.new
+    @categories = Category.all
   end
 
   # GET /wines/1/edit
   def edit
+    @categories = Category.all
   end
 
   # POST /wines
   # POST /wines.json
   def create
     @wine = Wine.new(wine_params)
+    @categories = Category.all
 
     respond_to do |format|
       if @wine.save
@@ -40,6 +43,7 @@ class WinesController < ApplicationController
   # PATCH/PUT /wines/1
   # PATCH/PUT /wines/1.json
   def update
+    @categories = Category.all
     respond_to do |format|
       if @wine.update(wine_params)
         format.html { redirect_to @wine, notice: 'Wine was successfully updated.' }
@@ -69,6 +73,6 @@ class WinesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def wine_params
-      params.require(:wine).permit(:name, :desc, :vineyard, :grape)
+      params.require(:wine).permit(:name, :desc, :vineyard, :grape, :image)
     end
 end

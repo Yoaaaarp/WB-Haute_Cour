@@ -1,1 +1,1 @@
-json.extract! @wine, :id, :name, :desc, :vineyard, :grape, :created_at, :updated_at
+json.extract! @wine, :id, :name, :desc, :vineyard, :grape, :image, :created_at, :updated_at

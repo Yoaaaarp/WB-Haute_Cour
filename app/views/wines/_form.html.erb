@@ -27,7 +27,16 @@
     <%= f.label :grape %><br>
     <%= f.text_field :grape %>
   </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.text_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :Category %><br /> 
+    <%= f.collection_select :category_id, @categories, :id, :name %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
+  
 <% end %>
