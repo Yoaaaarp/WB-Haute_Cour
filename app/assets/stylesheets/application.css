@@ -13,3 +13,217 @@
  *= require_tree .
  *= require_self
  */
+
+html, body {
+	font-family:Arial, Helvetica;
+	font-size:14px;
+	margin:0px;
+	padding:0px;
+	background-color:#fff;
+}
+
+h1 {
+	font-size:30px;
+	padding:50px 0px 0px 20px;
+	margin:0px;
+	}
+
+h2 {
+	font-size:18px;
+	padding:10px 0px 5px 5px;
+	margin:0px;
+	}
+
+p {
+	padding:5px;
+	margin:0px;
+	}
+
+input#user, input#email, input#telephone {
+	margin-bottom:5px;
+	width:200px;
+	}
+
+input.commande {
+	width:20px;
+	text-align:right;
+	}
+
+.clic {
+	padding:15px;
+	font-size:16px;
+	}
+
+a {
+	color:#000;
+	text-decoration:none;
+	}
+
+a.lien {
+	font-style:italic;
+	}	
+
+a:hover, a:active {
+	color:#888;
+	text-decoration:none;
+	}
+
+img.normal {
+	width:100px;
+	height:100px;
+	padding-top:5px;
+	}
+
+img.icone {
+	width:13px;
+	height:13px;
+	padding:10px 8px 0px 2px;
+	}
+
+div#general {
+	width:800px;
+	margin:0px auto 0px auto;
+	}
+
+div#bandeau {
+	width:100%;
+	height:100px;
+	background-image:url("Hautecour1.jpg");
+	border-radius:5px;
+	margin-bottom:4px;
+	}
+
+div#menu {
+	width:100%;
+	height:45px;
+	background-color:#eee;
+	border:1px solid #ccc;
+	border-radius:5px;
+	margin-bottom:4px;
+	}
+
+div#menu1 {
+	float:left;
+	padding:13px 6px 13px 6px;
+	}
+
+div#menu2 {
+	float:right;
+	padding:13px 6px 13px 6px;
+	}
+
+div.blanc {
+	clear:both;
+	width:100%;
+	height:50px;
+	background-color:#fff;
+	border:1px solid #eee;
+	border-radius:5px;
+	margin-bottom:4px;
+	}
+
+div#empty_menu {
+	clear:both;
+	float:left;
+	width:150px;
+}
+
+div#gestion {
+	clear:both;
+	float:left;
+	width:150px;
+	background-color:#eee;
+	border-radius:5px;
+	}
+
+div#conteneur {
+	float:left;
+	width:500px;
+	}
+
+div#conteneur_fullsize{
+	float:left;
+	width:100%;
+}
+
+div#conteneur_intermediaire{
+	float:left;
+	width:80%;
+	margin-right: 10px;
+}
+
+div#conteneur_intermediaire_right{
+	float:left;
+	width:80%;
+	margin-left: 10px;
+}
+
+div.article, div.contact {
+	width:100%;
+	border-bottom:1px solid #eee;	
+	border-top:1px solid #eee;
+	border-radius:5px;
+	margin-bottom:1px;
+	background-color:#eee;
+	}
+
+div.evenement, div.vin {
+	clear:both;
+	width:100%;
+	border-bottom:1px solid #eee;	
+	border-top:1px solid #eee;
+	border-radius:5px;
+	margin-bottom:1px;
+	}
+
+div.image {
+	float:left;
+	width:100px;
+	padding:5px 5px 0px 5px;
+	}
+
+div.description {
+	width:100%;
+	margin:0px;
+	padding:0px;
+	}
+
+div.ajouter {
+	float:right;
+	width:100px;
+	height:100px;
+	padding:10px 5px 0px 5px;
+	}
+
+div#panier {
+	float:left;
+	width:148px;
+	background-color:#eee;
+	border-radius:5px;
+	}
+
+td.nom {
+	width:128px;
+	}
+
+td.quantite {
+	width:20px;
+	}
+
+div#footer {
+	clear:both;
+	width:100%;
+	height:50px;
+	background-color:#eee;	
+	border:1px solid #ccc;
+	border-radius:5px;
+	margin-top:4px;
+	}
+
+div#footer1 {
+	float:left;
+	}
+
+div#footer2 {
+	float:right;
+	}

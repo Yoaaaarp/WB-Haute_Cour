@@ -1,15 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WBHauteCour</title>
+  <title>HauteCour</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="description" content="Hautecour">
+  <meta name="keywords" content="Hautecour, Vin, Mont-Sur-Rolle, Suisse, Lac Lꮡn, vignes, caveau, vignoble">
+  <meta name="author" content="Hautecour">
+  <meta name="copyright" content="ʈautecour">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
+<div id="general">
+<div id="bandeau">
+	<h1>Hautecour</h1>
+</div>
+<div id="menu">
+	<div id="menu1">
+		<%= link_to 'Accueil', {:controller => :welcome}, :class=>"clic" %>
+		<%= link_to 'Catalogue', {:controller => :catalogue}, :class=>"clic" %>
+		<%= link_to 'Evenements', {:controller => :event}, :class=>"clic" %>
+		<%= link_to 'Contact', {:controller => :contact}, :class=>"clic" %>
+	</div>
+
+	<div id="menu2">
+		<a class="clic" href="login.html">Login</a>
+		<a class="clic" href="compte.html">Compte</a>
+	</div>
+</div>
+
+<div class="blanc">
+	<p>Blank space, adapt them when site is finished</p>
+</div>
 
 <%= yield %>
 
-<p> Je suis dans le app layout <p>
+<div class="blanc">
+	<p>Blank space, adapt them when site is finished</p>
+</div>
+
+<div id="footer">
+	<div id="footer1">
+		<p class="clic">T&eacute;l&eacute;phone | Adresse courriel ou postale</p>
+	</div>
+
+	<div id="footer2">
+		<p class="clic">&copy; Hautecour</p>
+	</div>
+</div>
 </body>
 </html>
