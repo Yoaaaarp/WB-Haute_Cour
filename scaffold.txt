@@ -6,3 +6,5 @@ rails g scaffold Status name:string
 rails g scaffold Bottle price:float stock:integer capacity:float
 rails g scaffold Wine name:string desc:string vineyard:string grape:string
 rails g scaffold Category name:string
+
+rails generate controller welcome index
