@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :wines
+  resources :events
+  resources :users
   get 'admin/index'
 
   get 'event/index'

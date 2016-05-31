@@ -18,7 +18,7 @@ class WinesControllerTest < ActionController::TestCase
 
   test "should create wine" do
     assert_difference('Wine.count') do
-      post :create, wine: { desc: @wine.desc, grape: @wine.grape, name: @wine.name, vineyard: @wine.vineyard }
+      post :create, wine: { desc: @wine.desc, grape: @wine.grape, image: @wine.image, name: @wine.name, vineyard: @wine.vineyard }
     end
 
     assert_redirected_to wine_path(assigns(:wine))
@@ -35,7 +35,7 @@ class WinesControllerTest < ActionController::TestCase
   end
 
   test "should update wine" do
-    patch :update, id: @wine, wine: { desc: @wine.desc, grape: @wine.grape, name: @wine.name, vineyard: @wine.vineyard }
+    patch :update, id: @wine, wine: { desc: @wine.desc, grape: @wine.grape, image: @wine.image, name: @wine.name, vineyard: @wine.vineyard }
     assert_redirected_to wine_path(assigns(:wine))
   end
 

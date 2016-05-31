@@ -8,6 +8,10 @@
       <th>Name</th>
       <th>Pwd</th>
       <th>Admin</th>
+      <th>Street</th>
+      <th>City</th>
+      <th>Npa</th>
+      <th>Canton</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +22,10 @@
         <td><%= user.name %></td>
         <td><%= user.pwd %></td>
         <td><%= user.admin %></td>
+        <td><%= user.street %></td>
+        <td><%= user.city %></td>
+        <td><%= user.NPA %></td>
+        <td><%= user.canton %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>

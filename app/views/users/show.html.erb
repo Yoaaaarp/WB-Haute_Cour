@@ -15,5 +15,25 @@
   <%= @user.admin %>
 </p>
 
+<p>
+  <strong>Street:</strong>
+  <%= @user.street %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @user.city %>
+</p>
+
+<p>
+  <strong>Npa:</strong>
+  <%= @user.NPA %>
+</p>
+
+<p>
+  <strong>Canton:</strong>
+  <%= @user.canton %>
+</p>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
