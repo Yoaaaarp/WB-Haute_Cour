@@ -1,6 +1,15 @@
-<h1>Editing Wine</h1>
+<%= render "layouts/admin_menu" %>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @wine %> |
-<%= link_to 'Back', wines_path %>
+<div id="conteneur_intermediaire_right">
+	<div class="article">
+		<center>
+		<br/>
+		<h2>Editer le vin</h2>
+		<br/>
+		<br/>
+		<%= render 'form' %>
+		</center>
+		<%= link_to 'Afficher', @wine %> |
+		<%= link_to 'Retour à la liste de vin', wines_path %>
+	</div>
+</div>

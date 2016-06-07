@@ -1,11 +1,4 @@
-<div id="gestion">
-	<h2>Gestionnaire</h2>
-	<p><%= link_to 'Gérer les vins', wines_path%></p>
-	<p><a href="#">Gérer les bouteilles</a></p>
-	<p><a href="#">Gérer les stocks</a></p>
-	<p><a href="#">Gérer les commandes</a></p>
-	<p><%= link_to 'Gérer les évènements', events_path%></p>
-</div>
+<%= render "layouts/admin_menu" %>
 
 <div id="conteneur_intermediaire_right">
 	<div class="article">
@@ -13,8 +6,7 @@
 		<br/>
 		<br/>
 		<p><strong>Gérer les vins - </strong> permet d'ajouter, modifier ou supprimer les vins utilisables pour mettre en vente des bouteilles.</p>
-		<p><strong>Gérer les bouteilles - </strong> permet d'ajouter, modifier ou supprimer des bouteilles présentes dans le catalogue.</p>
-		<p><strong>Gérer les stocks - </strong> permet de gérer les stocks disponibles pour les bouteilles existantes.</p>
+		<p><strong>Gérer les stocks - </strong> permet d'ajouter, modifier ou supprimer des bouteilles présentes dans le catalogue et de gérer les stocks</p>
 		<p><strong>Gérer les commandes - </strong> affiche les commandes existantes et permet leur
 		gestion.</p>
 		<p><strong>Gérer les évènements - </strong> permet d'ajouter, modifier, supprimer des

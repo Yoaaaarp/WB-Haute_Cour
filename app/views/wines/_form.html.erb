@@ -12,27 +12,27 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.label :'Nom' %><br>
+    <%= f.text_field :name, :maxlength=>"30" %>
   </div>
   <div class="field">
-    <%= f.label :desc %><br>
-    <%= f.text_field :desc %>
+    <%= f.label :'Description' %><br>
+    <%= f.text_area :desc, :maxlength=>"254", :size=>"50x6" %>
   </div>
   <div class="field">
-    <%= f.label :vineyard %><br>
+    <%= f.label :'Vignoble' %><br>
     <%= f.text_field :vineyard %>
   </div>
   <div class="field">
-    <%= f.label :grape %><br>
+    <%= f.label :'Cépage' %><br>
     <%= f.text_field :grape %>
   </div>
   <div class="field">
-    <%= f.label :image %><br>
+    <%= f.label :'Image - URL' %><br>
     <%= f.text_field :image %>
   </div>
   <div class="field">
-    <%= f.label :Category %><br /> 
+    <%= f.label :'Catégorie' %><br /> 
     <%= f.collection_select :category_id, @categories, :id, :name %>
   </div>
   <div class="actions">

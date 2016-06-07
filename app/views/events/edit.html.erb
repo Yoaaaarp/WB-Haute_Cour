@@ -1,6 +1,13 @@
-<h1>Editing Event</h1>
+<%= render "layouts/admin_menu" %>
 
-<%= render 'form' %>
+<div id="conteneur_intermediaire_right">
+	<div class="article">
+		<center>
+		<h2>Editer l'évènement</h2>
 
-<%= link_to 'Show', @event %> |
-<%= link_to 'Back', events_path %>
+		<%= render 'form' %>
+		</center>
+		<%= link_to 'Afficher', @event %> |
+		<%= link_to 'Retour à la liste des évènements', events_path %>
+	</div>
+</div>

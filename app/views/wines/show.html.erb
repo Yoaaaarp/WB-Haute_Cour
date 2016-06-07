@@ -1,29 +1,21 @@
-<p id="notice"><%= notice %></p>
+<%= render "layouts/admin_menu" %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @wine.name %>
-</p>
+<!--<p id="notice"><%= notice %></p>-->
+<div id="conteneur_intermediaire">
+  <div class="vin">
+    <h2><%= @wine.name %></h2>
+    <div class="image">
+      <%= image_tag @wine.image, :class=>'normal' %>
+    </div>
 
-<p>
-  <strong>Desc:</strong>
-  <%= @wine.desc %>
-</p>
-
-<p>
-  <strong>Vineyard:</strong>
-  <%= @wine.vineyard %>
-</p>
-
-<p>
-  <strong>Grape:</strong>
-  <%= @wine.grape %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @wine.image %>
-</p>
-
-<%= link_to 'Edit', edit_wine_path(@wine) %> |
-<%= link_to 'Back', wines_path %>
+    <div class="description">
+      
+      <p><%= image_tag 'lieu  .png', :class=>'icone' %><%= @wine.vineyard %></p>
+      <p><%= image_tag 'vin.png', :class=>'icone' %><%= @wine.category.name%></p>
+      <p><%= image_tag 'contenance.png', :class=>'icone' %>Contenance</p>
+      <p><strong>DESCRIPTION</strong><br/><%= @wine.desc %></p>
+    </div>
+    <%= link_to 'Editer', edit_wine_path(@wine) %> |
+    <%= link_to 'Retour à la liste des vins', wines_path %>
+  </div>
+</div>
