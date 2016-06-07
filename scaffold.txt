@@ -8,3 +8,7 @@ rails g scaffold Wine name:string desc:string vineyard:string grape:string
 rails g scaffold Category name:string
 
 rails generate controller welcome index
+rails generate controller catalogue index
+rails generate controller event index
+rails generate controller admin index
+rails generate controller cart index

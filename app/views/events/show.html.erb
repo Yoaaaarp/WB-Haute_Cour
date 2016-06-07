@@ -1,24 +1,32 @@
-<p id="notice"><%= notice %></p>
+<div id="gestion">
+	<h2>Gestionnaire</h2>
+	<p><%= link_to 'Gérer les vins', wines_path%></p>
+	<p><a href="#">Gérer les bouteilles</a></p>
+	<p><a href="#">Gérer les stocks</a></p>
+	<p><a href="#">Gérer les commandes</a></p>
+	<p><%= link_to 'Gérer les évènements', events_path%></p>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
+<!--<p id="notice"><%= notice %></p>-->
 
-<p>
-  <strong>Text:</strong>
-  <%= @event.text %>
-</p>
+<div id="conteneur_intermediaire_right">
+	<div class="evenement">
+		<div class="image">
+			<!--<%= image_tag 'Hautecour2.jpg', :class=>'normal' %>-->
+			<%= image_tag @event.image, :class=>'normal' %>
+		</div>
 
-<p>
-  <strong>Beginat:</strong>
-  <%= @event.beginAt %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @event.image %>
-</p>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+		<div class="description">
+			<h2><%= @event.title %></h2>
+			<p><%= image_tag 'date.png', :class=>'icone' %><%= @event.beginAt %></p>
+			<p><%= image_tag 'lieu.png', :class=>'icone' %>LIEU</p>
+			<br/><br/>
+			<h2> Description de l'évènement</h2>
+			<p><%= @event.text %></p>
+		</div>
+		<div>
+			<%= link_to 'Editer', edit_event_path(@event) %> |
+			<%= link_to 'Retour à la liste d\'évènements', events_path %>
+		</div>
+	</div>
+</div>

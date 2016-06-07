@@ -1,13 +1,18 @@
 Rails.application.routes.draw do
+
   resources :users
   #get 'session/new'
 
-  get 'session/create'
+  #get 'session/create'
 
-  get 'session/destroy'
+  #get 'session/destroy'
 
   resources :wines
   resources :events
+
+
+  get 'contact/index'
+
   #get 'admin/index'
 
   get 'event/index'
@@ -31,10 +36,12 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get 'admin' => 'admin#index'
-  controller :sessions do
-    get 'login' => :new
-    post 'login' => :create
-    delete 'logout' => :destroy
+  resources :sessions do
+    collection do
+      get 'login' => :new
+      post 'login' => :create
+      delete 'logout' => :destroy
+    end
   end
 
   # Example of regular route:
