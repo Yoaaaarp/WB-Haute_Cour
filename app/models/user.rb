@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
-	has_many :orders
-	validates_presence_of :name, :pwd, :street, :city, :npa, :canton
+  has_secure_password
+  has_many :orders
+  validates_presence_of :name, :password, :street, :npa, :city, :canton
 end

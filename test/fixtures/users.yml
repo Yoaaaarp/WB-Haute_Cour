@@ -2,18 +2,18 @@
 
 one:
   name: MyString
-  pwd: MyString
+  password_digest: <%= BCrypt::Password.create('secret') %>
   admin: 1
   street: MyString
   city: MyString
-  NPA: 1
+  npa: 1
   canton: MyString
 
 two:
   name: MyString
-  pwd: MyString
+  password_digest: <%= BCrypt::Password.create('secret') %>
   admin: 1
   street: MyString
   city: MyString
-  NPA: 1
+  npa: 1
   canton: MyString

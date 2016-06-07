@@ -16,8 +16,12 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :pwd %><br>
-    <%= f.text_field :pwd %>
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation %><br>
+    <%= f.password_field :password_confirmation %>
   </div>
   <div class="field">
     <%= f.label :admin %><br>
@@ -32,8 +36,8 @@
     <%= f.text_field :city %>
   </div>
   <div class="field">
-    <%= f.label :NPA %><br>
-    <%= f.number_field :NPA %>
+    <%= f.label :npa %><br>
+    <%= f.number_field :npa %>
   </div>
   <div class="field">
     <%= f.label :canton %><br>

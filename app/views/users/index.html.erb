@@ -2,11 +2,16 @@
 
 <h1>Listing Users</h1>
 
+<% if notice %>
+<p id="notice"> <%= notice %>
+</p>
+<% end %>
+
+
 <table>
   <thead>
     <tr>
       <th>Name</th>
-      <th>Pwd</th>
       <th>Admin</th>
       <th>Street</th>
       <th>City</th>
@@ -20,11 +25,10 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= user.name %></td>
-        <td><%= user.pwd %></td>
         <td><%= user.admin %></td>
         <td><%= user.street %></td>
         <td><%= user.city %></td>
-        <td><%= user.NPA %></td>
+        <td><%= user.npa %></td>
         <td><%= user.canton %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
