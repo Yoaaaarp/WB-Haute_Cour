@@ -1,4 +1,24 @@
 <div id="conteneur_intermediaire">
+	<% @bottles.each do |bottle| %>
+		<div class="vin">
+			<div class="image">
+				<%= image_tag bottle.wine.image, :class=>'normal' %>
+			</div>
+
+			<div class="ajouter">
+				<a href="#"><img src="ajouter.png" onmouseover="this.src='ajouter2.png'" onmouseout="this.src='ajouter.png'" /></a>
+			</div>
+
+			<div class="description">
+		    	<p><%= image_tag 'lieu.png', :class=>'icone' %><%= bottle.wine.vineyard %></p>
+		    	<p><%= image_tag 'vin.png', :class=>'icone' %><%= bottle.wine.category.name%></p>
+		      	<p><%= image_tag 'contenance.png', :class=>'icone' %><%= bottle.capacity%> cl</p>
+		      	<p><strong>DESCRIPTION</strong><br/><%= @wine.desc %></p>
+		    </div>
+		</div>
+	<% end %>
+
+
 	<div class="vin">
 		<div class="image">
 			<%= image_tag 'Hautecour2.jpg', :class=>'normal' %>

@@ -13,7 +13,12 @@ Rails.application.routes.draw do
 
   get 'contact/index'
 
+
+  
+  get 'contact/index'
+
   #get 'admin/index'
+
 
   get 'event/index'
 
