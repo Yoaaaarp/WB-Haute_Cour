@@ -1,16 +1,17 @@
 <div id="gestion">
-  <h2>Administration</h2>
-  <p><a href="#">Gérer les vin</a></p>
-  <p><a href="#"></a></p>
+  <h2>Gestionnaire</h2>
+  <p><%= link_to 'Gérer les vins', wines_path%></p>
+  <p><a href="#">Gérer les bouteilles</a></p>
+  <p><a href="#">Gérer les stocks</a></p>
   <p><a href="#">Gérer les commandes</a></p>
-  <p><%= link_to 'Gérer évènement', events_path%></p>
+  <p><%= link_to 'Gérer les évènements', events_path%></p>
 </div>
 
 <div id="conteneur_intermediaire_right">
   <div class="article">
     <h1>Liste des évènements</h1>
     <br/>
-    <table>
+    <table border = 1>
       <thead>
         <tr>
           <th>Titre</th>

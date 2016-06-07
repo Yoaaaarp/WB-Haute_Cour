@@ -1,5 +1,19 @@
-<h1>New Event</h1>
+<div id="gestion">
+	<h2>Gestionnaire</h2>
+	<p><%= link_to 'Gérer les vins', wines_path%></p>
+	<p><a href="#">Gérer les bouteilles</a></p>
+	<p><a href="#">Gérer les stocks</a></p>
+	<p><a href="#">Gérer les commandes</a></p>
+	<p><%= link_to 'Gérer les évènements', events_path%></p>
+</div>
 
-<%= render 'form' %>
+<div id="conteneur_intermediaire_right">
+	<div class="article">
+		<h2><center>Création d'évènement</center></h2>
+		<center>
+		<%= render 'form' %>
+		</center>
 
-<%= link_to 'Back', events_path %>
+		<%= link_to 'Retour à la liste d\'évènements', events_path %>
+	</div>
+</div>
