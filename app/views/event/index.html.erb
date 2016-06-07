@@ -3,13 +3,16 @@
 	<% @events.each do |event| %>
         <div class="evenement">
 			<div class="image">
-				<%= image_tag 'Hautecour2.jpg', :class=>'normal' %>
+				<!--<%= image_tag 'Hautecour2.jpg', :class=>'normal' %>-->
+				<%= image_tag event.image, :class=>'normal' %>
 			</div>
 
 			<div class="description">
 				<h2><%= event.title %></h2>
-				<p><%= image_tag 'date.png', :class=>'icone' %>DATE(S)</p>
-				<p><%= image_tag 'lieu.png', :class=>'icone' %><%= event.beginAt %></p>
+				<p><%= image_tag 'date.png', :class=>'icone' %><%= event.beginAt %></p>
+				<p><%= image_tag 'lieu.png', :class=>'icone' %>LIEU</p>
+				<br/><br/>
+				<h2> Description de l'évènement</h2>
 				<p><%= event.text %></p>
 			</div>
 		</div>

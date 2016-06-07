@@ -34,10 +34,21 @@ h2 {
 	margin:0px;
 	}
 
+h2.article {
+	padding-right: 30px;
+	padding-left: 30px;
+	margin-bottom: 10px;
+}
+
 p {
 	padding:5px;
 	margin:0px;
 	}
+
+p.article {
+	padding-left:30px;
+	padding-right:30px;
+}
 
 input#user, input#email, input#telephone {
 	margin-bottom:5px;
@@ -144,6 +155,8 @@ div#conteneur {
 div#conteneur_fullsize{
 	float:left;
 	width:100%;
+	padding: 0px;
+	margin: 0px;
 }
 
 div#conteneur_intermediaire{
@@ -174,6 +187,7 @@ div.evenement, div.vin {
 	border-top:1px solid #eee;
 	border-radius:5px;
 	margin-bottom:1px;
+	background-color:#eee;
 	}
 
 div.image {
