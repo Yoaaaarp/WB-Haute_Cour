@@ -34,6 +34,9 @@
 		<div id="menu2"> 
 			<%= link_to 'Compte' , edit_user_url(session[:user_id]), :class => "clic" %>
 			<%= link_to 'Logout', {:controller => :sessions, :action => :destroy}, :method => :delete, :class => "clic" %>
+			<% if session[:admin] == 1 %>
+				<%= link_to 'Aministration', {:controller => :admin}, :class => "clic" %>
+			<% end %>
 		</div>
 	<% end %>
 </div>

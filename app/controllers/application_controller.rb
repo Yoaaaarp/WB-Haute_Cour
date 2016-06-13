@@ -9,4 +9,10 @@ class ApplicationController < ActionController::Base
   		redirect_to login_sessions_url, notice:"You are trying to access a limited access page"
   	end
   end
+
+  def admin
+  	unless User.find_by(:id => session[:user_id], :admin => 1)
+  		redirect_to "/"
+  	end
+  end
 end
