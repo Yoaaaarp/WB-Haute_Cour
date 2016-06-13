@@ -2,32 +2,37 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Bottles</h1>
+<div id="conteneur_intermediaire_right">  
+  <div class="article">
+    <h1>Liste des bouteilles disponibles</h1>
+    <br/>
 
-<table>
-  <thead>
-    <tr>
-      <th>Price</th>
-      <th>Stock</th>
-      <th>Capacity</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Prix</th>
+          <th>Stock</th>
+          <th>Contenance</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @bottles.each do |bottle| %>
-      <tr>
-        <td><%= bottle.price %></td>
-        <td><%= bottle.stock %></td>
-        <td><%= bottle.capacity %></td>
-        <td><%= link_to 'Show', bottle %></td>
-        <td><%= link_to 'Edit', edit_bottle_path(bottle) %></td>
-        <td><%= link_to 'Destroy', bottle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <tbody>
+        <% @bottles.each do |bottle| %>
+          <tr>
+            <td><%= bottle.price %></td>
+            <td><%= bottle.stock %></td>
+            <td><%= bottle.capacity %></td>
+            <td><%= link_to 'Afficher', bottle %></td>
+            <td><%= link_to 'Editer', edit_bottle_path(bottle) %></td>
+            <td><%= link_to 'Supprimer', bottle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-<br>
+    <br>
 
-<%= link_to 'New Bottle', new_bottle_path %>
+    <%= link_to 'Ajouter une nouvelle bouteille', new_bottle_path %>
+  </div>
+</div>

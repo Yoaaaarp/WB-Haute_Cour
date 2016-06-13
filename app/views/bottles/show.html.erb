@@ -1,21 +1,23 @@
 <%= render "layouts/admin_menu" %>
 
 <p id="notice"><%= notice %></p>
+<div id="conteneur_intermediaire_right">
+	<div class="vin">
+		<div class="image">
+			<%= image_tag @bottle.wine.image, :class=>'normal' %>
+		</div>
 
-<p>
-  <strong>Price:</strong>
-  <%= @bottle.price %>
-</p>
+		<div class="description">
+	    	<p><%= image_tag 'lieu.png', :class=>'icone' %><%= @bottle.wine.vineyard %></p>
+	    	<p><%= image_tag 'vin.png', :class=>'icone' %><%= @bottle.wine.category.name%></p>
+	      	<p><%= image_tag 'contenance.png', :class=>'icone' %><%= @bottle.capacity%> cl</p>
+	      	<p><strong>DESCRIPTION</strong><br/><%= @bottle.wine.desc %></p>
+	      	<br/>
+	      	<p><strong>Prix : </strong><%= @bottle.price %> </p>
+	      	<p><strong>Stock : </strong><%= @bottle.stock %> </p>
+	    </div>
 
-<p>
-  <strong>Stock:</strong>
-  <%= @bottle.stock %>
-</p>
-
-<p>
-  <strong>Capacity:</strong>
-  <%= @bottle.capacity %>
-</p>
-
-<%= link_to 'Edit', edit_bottle_path(@bottle) %> |
-<%= link_to 'Back', bottles_path %>
+		<%= link_to 'Editer', edit_bottle_path(@bottle) %> |
+		<%= link_to 'Retour à la liste des bouteilles', bottles_path %>
+	</div>
+</div>

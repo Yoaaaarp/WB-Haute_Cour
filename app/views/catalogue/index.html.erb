@@ -13,7 +13,10 @@
 		    	<p><%= image_tag 'lieu.png', :class=>'icone' %><%= bottle.wine.vineyard %></p>
 		    	<p><%= image_tag 'vin.png', :class=>'icone' %><%= bottle.wine.category.name%></p>
 		      	<p><%= image_tag 'contenance.png', :class=>'icone' %><%= bottle.capacity%> cl</p>
-		      	<p><strong>DESCRIPTION</strong><br/><%= @wine.desc %></p>
+		      	<p><strong>DESCRIPTION</strong><br/><%= bottle.wine.desc %></p>
+		      	<br/>
+		      	<p><strong>Prix : </strong> <%= bottle.price %></p>
+		      	<p><strong>Stock : </strong> <%= bottle.stock %></p>
 		    </div>
 		</div>
 	<% end %>

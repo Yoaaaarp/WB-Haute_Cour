@@ -1,7 +1,11 @@
 <%= render "layouts/admin_menu" %>
 
-<h1>New Bottle</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', bottles_path %>
+<div id="conteneur_intermediaire_right">
+	<div class="article">
+		<center>
+		<h2>Création de bouteilles</h2>
+		<%= render 'form' %>
+		</center>
+		<%= link_to 'Retour à la liste des bouteilles', bottles_path %>
+	</div>
+</div>

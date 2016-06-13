@@ -12,16 +12,20 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :price %><br>
+    <%= f.label :'Vin' %><br /> 
+    <%= f.collection_select :wine_id, @wines, :id, :name %>
+  </div>
+  <div class="field">
+    <%= f.label :"Contenance (cl)" %><br>
+    <%= f.text_field :capacity %>
+  </div>
+  <div class="field">
+    <%= f.label :Prix %><br>
     <%= f.text_field :price %>
   </div>
   <div class="field">
-    <%= f.label :stock %><br>
+    <%= f.label :Stock %><br>
     <%= f.number_field :stock %>
-  </div>
-  <div class="field">
-    <%= f.label :capacity %><br>
-    <%= f.text_field :capacity %>
   </div>
   <div class="actions">
     <%= f.submit %>

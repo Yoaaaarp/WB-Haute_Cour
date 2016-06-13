@@ -1,5 +1,38 @@
 <div class="conteneur_fullsize">
-	<div class="article">
-		<p> Ici seront ajouté les informations de contacts </p>
+	<div class="contact">
+		<center>
+		<h2>Hautecour</h2>
+		<p>Adresse postale</p>
+		<p>Adresse mail</p>
+		<p>Téléphone</p>
+		<br/>
+		<br/>
+		<h2>Formulaire de contact</h2>
+
+		<form id="myform" class="cssform" action="mailto:LEMAIL" method="post" name="contact">
+
+			<p><label for="user">Nom &amp; Pr&eacutenom :</label>
+			<br /><input type="text" id="user" value="" /></p>
+
+			<p><label for="email">Email :</label>
+			<br /><input type="text" id="email" value="" /></p>
+
+			<p><label for="telephone">T&eacute;l&eacute;phone :</label>
+			<br /><input type="text" id="telephone" value="" /></p>
+
+			<!--<p><label for="comments">Sujet :</label>
+			<br /><input type="radio" name="sujet" /> &Eacute;venement
+			<br /><input type="radio" name="sujet" /> Vin(s)
+			<br /><input type="radio" name="sujet" /> Autre</p>
+			-->
+			<p><label for="comments">Message :</label>
+			<br /><textarea id="comments" rows="5" cols="59"></textarea></p>
+
+			<p>
+			<input type="submit" value="Envoyer" />
+			<input type="reset" value="R&eacute;inistialiser" />
+			</p>
+		</form>
+		</center>
 	</div>
 </div>
