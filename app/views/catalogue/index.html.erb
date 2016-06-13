@@ -1,92 +1,33 @@
 <div id="conteneur_intermediaire">
-	<% @bottles.each do |bottle| %>
+	<% @wines.each do |wine| %>
 		<div class="vin">
+			<h2><%= wine.name %></h2>
 			<div class="image">
-				<%= image_tag bottle.wine.image, :class=>'normal' %>
+				<%= image_tag wine.image, :class=>'normal' %>
 			</div>
-
-			<div class="ajouter">
-				<a href="#"><img src="ajouter.png" onmouseover="this.src='ajouter2.png'" onmouseout="this.src='ajouter.png'" /></a>
-			</div>
-
 			<div class="description">
-		    	<p><%= image_tag 'lieu.png', :class=>'icone' %><%= bottle.wine.vineyard %></p>
-		    	<p><%= image_tag 'vin.png', :class=>'icone' %><%= bottle.wine.category.name%></p>
-		      	<p><%= image_tag 'contenance.png', :class=>'icone' %><%= bottle.capacity%> cl</p>
-		      	<p><strong>DESCRIPTION</strong><br/><%= bottle.wine.desc %></p>
+		    	<p><%= image_tag 'vignoble.png', :class=>'icone' %><%= wine.vineyard %></p>
+		    	<p><%= image_tag 'vin.png', :class=>'icone' %><%= wine.category.name%></p>
+		    	<p><%= image_tag 'cepage.png', :class=>'icone'%><%= wine.grape%></p>
+		      	<p><strong>DESCRIPTION</strong><br/><%= wine.desc %></p>
 		      	<br/>
-		      	<p><strong>Prix : </strong> <%= bottle.price %></p>
-		      	<p><strong>Stock : </strong> <%= bottle.stock %></p>
+		      	<% @bottles.each do |bottle| %>
+		      		<p> avant </p>
+		      		<% if bottle.wine.id == wine.id %>
+		      		<p> pendant</p>
+		      			<%= form_for :link, :url => creer_link_bottle_path(bottle), :method => :post do |f| %>
+		      				<div class="quantite">
+			      				<%= image_tag 'contenance.png', :class=>'icone' %><%= bottle.capacity%> cl - <%= bottle.price %> CHF
+				      			<%= f.number_field :number, :class=>'quantite' %>
+				      			<%= f.submit "Ajouter au pannier" %>
+		      				</div>
+		      			<% end %>
+		      		<% end %>
+		      		<p> après </p>
+		      	<% end %>
 		    </div>
 		</div>
 	<% end %>
-
-
-	<div class="vin">
-		<div class="image">
-			<%= image_tag 'Hautecour2.jpg', :class=>'normal' %>
-		</div>
-
-		<div class="ajouter">
-			<a href="#"><img src="ajouter.png" onmouseover="this.src='ajouter2.png'" onmouseout="this.src='ajouter.png'" /></a>
-		</div>
-
-		<div class="description">
-			<h2>Nom du vin</h2>
-			<p><%= image_tag 'date.png', :class=>'icone' %>Ann&eacute;e : 2016</p>
-			<p><%= image_tag 'vin.png', :class=>'icone' %>Type de vin</p>
-			<p><%= image_tag 'contenance.png', :class=>'icone' %>Contenance</p>
-			<p>DESCRIPTION a a a a a a aa a a a a a a a a a a aa a a a a a a a a a a a a a aa a a a am a a a a a a a a a a a a a a a a a a a aa a a a am a a a a a a a a a a a a a a a a a a a a aa a a a a a a a a aa a a a a aa a a a a a aa a a a a aa a a a a aa a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a</p>
-		</div>
-	</div>
-	<div class="vin">
-		<div class="image">
-			<%= image_tag 'Hautecour2.jpg', :class=>'normal' %>
-		</div>
-
-		<div class="ajouter">
-			<a href="#"><img src="ajouter.png" onmouseover="this.src='ajouter2.png'" onmouseout="this.src='ajouter.png'" /></a>
-		</div>
-
-		<div class="description">
-			<h2>Nom du vin</h2>
-			<p><%= image_tag 'date.png', :class=>'icone' %>Ann&eacute;e : 2016</p>
-			<p><%= image_tag 'vin.png', :class=>'icone' %>Type de vin</p>
-			<p>DESCRIPTION a a a a a a aa a a a a a a a a a a aa a a a a a a a a a a a a a aa a a a am a a a a a a a a a a a a a a a a a a a aa a a a am a a a a a a a a a a a a a a a a a a a a aa a a a a a a a a aa a a a a aa a a a a a aa a a a a aa a a a a aa a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a</p>
-		</div>
-	</div>
-	<div class="vin">
-		<div class="image">
-			<%= image_tag 'Hautecour2.jpg', :class=>'normal' %>
-		</div>
-
-		<div class="ajouter">
-			<a href="#"><img src="ajouter.png" onmouseover="this.src='ajouter2.png'" onmouseout="this.src='ajouter.png'" /></a>
-		</div>
-
-		<div class="description">
-			<h2>Nom du vin</h2>
-			<p><%= image_tag 'date.png', :class=>'icone' %>Ann&eacute;e : 2016</p>
-			<p><%= image_tag 'vin.png', :class=>'icone' %>Type de vin</p>
-			<p>DESCRIPTION a a a a a a aa a a a a a a a a a a aa a a a a a a a a a a a a a aa a a a am a a a a a a a a a a a a a a a a a a a aa a a a am a a a a a a a a a a a a a a a a a a a a aa a a a a a a a a aa a a a a aa a a a a a aa a a a a aa a a a a aa a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a</p>
-		</div>
-	</div>
-	<div class="vin">
-		<div class="image">
-			<%= image_tag 'Hautecour2.jpg', :class=>'normal' %>
-		</div>
-
-		<div class="ajouter">
-			<a href="#"><img src="ajouter.png" onmouseover="this.src='ajouter2.png'" onmouseout="this.src='ajouter.png'" /></a>
-		</div>
-
-		<div class="description">
-			<h2>Nom du vin</h2>
-			<p><%= image_tag 'date.png', :class=>'icone' %>Ann&eacute;e : 2016</p>
-			<p><%= image_tag 'vin.png', :class=>'icone' %>Type de vin</p>
-			<p>DESCRIPTION a a a a a a aa a a a a a a a a a a aa a a a a a a a a a a a a a aa a a a am a a a a a a a a a a a a a a a a a a a aa a a a am a a a a a a a a a a a a a a a a a a a a aa a a a a a a a a aa a a a a aa a a a a a aa a a a a aa a a a a aa a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a</p>
-		</div>
-	</div>
 </div>
 
 <div id="panier">

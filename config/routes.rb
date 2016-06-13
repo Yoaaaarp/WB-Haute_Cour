@@ -28,7 +28,11 @@ Rails.application.routes.draw do
 
   resources :categories
   resources :wines
-  resources :bottles
+  resources :bottles do
+    member do
+      post :creer_link
+    end
+  end
   resources :statuses
   resources :orders
   resources :events

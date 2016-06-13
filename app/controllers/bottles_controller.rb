@@ -66,6 +66,17 @@ class BottlesController < ApplicationController
     end
   end
 
+  def creer_link
+    puts"**********************************"
+    puts"#{link_params}"
+    puts"**********************************"
+    @bottle = Bottle.find(params[:id])
+    link = Link.new(link_params)
+    link.bottle = @bottle
+    link.save
+    redirect_to catalogue_path
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_bottle
@@ -76,4 +87,9 @@ class BottlesController < ApplicationController
     def bottle_params
       params.require(:bottle).permit(:price, :stock, :capacity, :wine_id)
     end
+
+    def link_params
+      params.require(:link).permit(:number)
+    end
+
 end
