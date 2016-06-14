@@ -1,4 +1,8 @@
+<% if session[:user_id] != nil %>
 <div id="conteneur_intermediaire">
+<% else %>
+<div id="conteneur_fullsize">
+<% end %>
 	<% @wines.each do |wine| %>
 		<div class="vin">
 			<h2><%= wine.name %></h2>
@@ -16,8 +20,10 @@
 		      			<%= form_for :link, :url => creer_link_bottle_path(bottle), :method => :post do |f| %>
 		      				<div class="quantite">
 			      				<%= image_tag 'contenance.png', :class=>'icone' %><%= bottle.capacity%> cl - <%= bottle.price %> CHF
-				      			<%= f.number_field :number, :class=>'quantite' %>
-				      			<%= f.submit "Ajouter au pannier" %>
+			      				<% if session[:user_id] != nil %>
+				      				<%= f.number_field :number, :class=>'quantite' %>
+				      				<%= f.submit "Ajouter au pannier" %>
+				      			<% end %>
 		      				</div>
 		      			<% end %>
 		      		<% end %>
@@ -27,6 +33,7 @@
 	<% end %>
 </div>
 
+<% if session[:user_id] != nil %>
 <div id="panier">
 	<h2>Panier</h2>
 	<table width="100%" id="articles">
@@ -47,3 +54,4 @@
 	</table>
 	<p><a class="lien" href="#">Passer la commande</a></p>
 </div>
+<% end %>

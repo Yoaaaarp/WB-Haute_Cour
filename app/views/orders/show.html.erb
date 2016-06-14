@@ -9,7 +9,7 @@
 		
 		<h2> Commande n°<%= @order.id %></h2>
 		<br/>
-		<p><u><strong> Détails commande </u> [<%= @order.status.name %>]</strong></p>
+		<p><u><strong> Détails commande :</u>  [<%= @order.status.name %>]</strong></p>
 		<% @order.links.each do |link| %>
 			<p>
 				<%= link.bottle.wine.name %> -
