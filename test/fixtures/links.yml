@@ -1,11 +1,50 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   order_id: 1
   bottle_id: 1
-  number: 1
+  number: 3
 
 two:
+  id: 2
   order_id: 1
+  bottle_id: 2
+  number: 2
+
+three:
+  id: 3
+  order_id: 1
+  bottle_id: 5
+  number: 4
+
+four:
+  id: 4
+  order_id: 2
   bottle_id: 1
-  number: 1
+  number: 2
+
+five:
+  id: 5
+  order_id: 2
+  bottle_id: 1
+  number: 3
+
+six:
+  id: 6
+  order_id: 2
+  bottle_id: 1
+  number: 8
+
+seven:
+  id: 7
+  order_id: 3
+  bottle_id: 1
+  number: 10
+
+eight:
+  id: 8
+  order_id: 3
+  bottle_id: 1
+  number: 15
+

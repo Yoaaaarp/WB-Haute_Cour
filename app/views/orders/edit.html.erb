@@ -1,6 +1,26 @@
-<h1>Editing Order</h1>
+<%= render "layouts/admin_menu" %>
 
-<%= render 'form' %>
+<div id="conteneur_intermediaire_right">
+  	<div class="article">
+		<p id="notice"><%= notice %></p>
+		
+		<h2>Commande n° <%= @order.id %></h2>
+		<br/>
+		<p><u><strong> Détails commande </u> [<%= @order.status.name %>]</strong></p>
+		<% @order.links.each do |link| %>
+			<p>
+				<%= link.bottle.wine.name %> -
+				<%= link.bottle.capacity %> cl, 
+				<%= link.number %> x <%= link.bottle.price %> CHF -
+				Total : <%= '%.2f' %(link.number * link.bottle.price) %> CHF
+			</p>
+		<% end %>
+		<br/>
+		<p>
+			<strong>Prix total de la commande : <%= '%.2f' %(@order.total_price) %> CHF</strong>
+		</p>
+		<br/>
 
-<%= link_to 'Show', @order %> |
-<%= link_to 'Back', orders_path %>
+		<%= render 'form' %>
+	</div>
+</div>

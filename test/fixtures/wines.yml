@@ -1,15 +1,46 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  id: 1
+  name: Mont
   desc: MyString
   vineyard: MyString
   grape: MyString
-  image: MyString
+  image: mont.jpg
+  category_id: 2
 
 two:
-  name: MyString
+  id: 2
+  name: Coudrillon
   desc: MyString
   vineyard: MyString
   grape: MyString
-  image: MyString
+  image: coudrillon.jpg
+  category_id: 3
+
+three:
+  id: 3
+  name: Gamay
+  desc: MyString
+  vineyard: MyString
+  grape: MyString
+  image: gamay.jpg
+  category_id: 1
+
+four:
+  id: 4
+  name: Pinot Noir
+  desc: MyString
+  vineyard: MyString
+  grape: MyString
+  image: pinot_noir.jpg
+  category_id: 1
+
+five:
+  id: 5
+  name: Saint Livres
+  desc: MyString
+  vineyard: MyString
+  grape: MyString
+  image: saint_livres.jpg
+  category_id: 2 

@@ -1,4 +1,37 @@
-<p id="notice"><%= notice %></p>
-
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
+<% if session[:admin] == 1 %>
+	<%= render "layouts/admin_menu" %>
+<% else %>
+	<%= render "layouts/account_menu" %>
+<% end %>
+<div id="conteneur_intermediaire_right">
+  	<div class="article">
+		<p id="notice"><%= notice %></p>
+		
+		<h2> Commande n°<%= @order.id %></h2>
+		<br/>
+		<p><u><strong> Détails commande </u> [<%= @order.status.name %>]</strong></p>
+		<% @order.links.each do |link| %>
+			<p>
+				<%= link.bottle.wine.name %> -
+				<%= link.bottle.capacity %> cl, 
+				<%= link.number %> x <%= link.bottle.price %> CHF -
+				Total : <%= '%.2f' %(link.number * link.bottle.price) %> CHF
+			</p>
+		<% end %>
+		<br/>
+		<p>
+			<strong>Prix total de la commande : <%= '%.2f' %(@order.total_price) %> CHF</strong>
+		</p>
+		
+		<% if session[:admin] == 1 %>
+			<p>
+			<%= link_to 'Gérer', edit_order_path(@order) %> |
+			<%= link_to 'Retourner à la liste des commandes', orders_path %>
+			</p>
+		<% else %>
+			<p>
+			<%= link_to 'Retourner à la liste des commandes', {:controller => :account} %>
+			<p>
+		<% end %>
+	</div>
+</div>

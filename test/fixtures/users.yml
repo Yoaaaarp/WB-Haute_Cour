@@ -1,19 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  password_digest: <%= BCrypt::Password.create('secret') %>
+  id: 1
+  name: admin
+  password_digest: <%= BCrypt::Password.create('123') %>
   admin: 1
-  street: MyString
-  city: MyString
-  npa: 1
-  canton: MyString
+  street: Rue des bars
+  city: Mwedwon
+  npa: 9999
+  canton: Vaud
 
 two:
-  name: MyString
-  password_digest: <%= BCrypt::Password.create('secret') %>
-  admin: 1
-  street: MyString
-  city: MyString
-  npa: 1
-  canton: MyString
+  id: 2
+  name: user
+  password_digest: <%= BCrypt::Password.create('123') %>
+  admin: 0
+  street: Rue de l'utilisateur
+  city: UserCity
+  npa: 5555
+  canton: Bern

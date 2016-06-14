@@ -1,7 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  id: 1
+  name: En attente
 
 two:
-  name: MyString
+  id: 2
+  name: Validée
+
+three:
+  id: 3
+  name: Annulée

@@ -1,13 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  text: MyString
-  beginAt: 2016-05-31 16:11:47
-  image: MyString
+  id: 1
+  title: Rolle & Rave
+  text: Hautecour sera présent à la Rave mondialement connue de Rolle à travers un stand de dégustation de vins délicats. Qui a dit que les vignerons n'étaient pas branchés ?
+  beginAt: 2016-06-31 20:30:00
+  image: https://showbams.files.wordpress.com/2014/09/edmcrowd.jpg
 
 two:
-  title: MyString
-  text: MyString
+  id: 2
+  title: A bas le valais !
+  text: Regroupement des principaux vignobles vaudois afin de montrer au monde entier le gouffre existant entre la qualité irréprochable du vin vaudois et la vinasse valaisanne...
   beginAt: 2016-05-31 16:11:47
-  image: MyString
+  image: http://siontourisme.ch/images/histoire_de_raclette/histoire_raclette1.jpg
+
