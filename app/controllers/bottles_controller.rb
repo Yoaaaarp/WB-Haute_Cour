@@ -67,9 +67,6 @@ class BottlesController < ApplicationController
   end
 
   def creer_link
-    puts"**********************************"
-    puts"#{link_params}"
-    puts"**********************************"
     @bottle = Bottle.find(params[:id])
     @link = Link.new(link_params)
     @link.bottle = @bottle
@@ -79,7 +76,6 @@ class BottlesController < ApplicationController
         format.js {render 'create_link'}
       end
     end
-    #redirect_to "/catalogue/index"
   end
 
   private

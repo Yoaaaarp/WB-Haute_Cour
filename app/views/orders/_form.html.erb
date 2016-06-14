@@ -11,6 +11,11 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= f.label :"Modifier le status de la commande :" %><br>
+    <%= f.collection_select :status_id, @statuses, :id, :name %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

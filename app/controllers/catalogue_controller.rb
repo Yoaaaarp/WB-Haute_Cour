@@ -19,5 +19,4 @@ class CatalogueController < ApplicationController
       params.require(:number)
     end
 
-  
 end

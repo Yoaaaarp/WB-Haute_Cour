@@ -1,8 +1,13 @@
 <%= render "layouts/admin_menu" %>
 
-<h1>Editing Bottle</h1>
+<div id="conteneur_intermediaire_right">
+	<div class="article">
+		<center>
+		<h1>Editer la bouteille</h1>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @bottle %> |
-<%= link_to 'Back', bottles_path %>
+		<%= render 'form' %>
+		</center>
+		<%= link_to 'Afficher', @bottle %> |
+		<%= link_to 'Retour à la liste de bouteilles', bottles_path %>
+	</div>
+</div>

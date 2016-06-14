@@ -1,9 +1,13 @@
+<% if session[:user_id] != nil %>
 <div id="conteneur_intermediaire">
+<% else %>
+<div id="conteneur_fullsize">
+<% end %>
 	<% @wines.each do |wine| %>
 		<div class="vin">
 			<h2><%= wine.name %></h2>
 			<div class="image">
-				<%= image_tag wine.image, :class=>'normal' %>
+				<%= image_tag wine.image, :class=>'normal_wine' %>
 			</div>
 			<div class="description">
 		    	<p><%= image_tag 'vignoble.png', :class=>'icone' %><%= wine.vineyard %></p>
@@ -13,13 +17,13 @@
 		      	<br/>
 		      	<% @bottles.each do |bottle| %>
 		      		<% if bottle.wine.id == wine.id %>
-		      		
 		      			<%= form_for :link, :remote=>true , :url => creer_link_bottle_path(bottle), :method => :post do |f| %>
-
 		      				<div class="quantite">
 			      				<%= image_tag 'contenance.png', :class=>'icone' %><%= bottle.capacity%> cl - <%= bottle.price %> CHF
-				      			<%= f.number_field :number, :class=>'quantite' %>
-				      			<%= f.submit "Ajouter au pannier" %>
+			      				<% if session[:user_id] != nil %>
+				      				<%= f.number_field :number, :class=>'quantite' %>
+				      				<%= f.submit "Ajouter au pannier" %>
+				      			<% end %>
 		      				</div>
 		      			<% end %>
 		      		<% end %>
@@ -29,13 +33,17 @@
 	<% end %>
 </div>
 
-<div id="panier">
-	<h2>Panier</h2>
-	<%= form_for @order,:remote=>true, :url => submit_order_orders_path, :method => :post do |f| %>
-	<table width="100%" id="articles">
-		
-	</table>
-	<table id="total"> </table>
-	<p><%= f.submit "Passer la commande" %></p>
-	<%end %>
-</div>
+<% if session[:user_id] != nil %>
+	<div id="panier">
+		<h2>Panier</h2>
+		<%= form_for @order,:remote=>true, :url => submit_order_orders_path, :method => :post do |f| %>
+		<table width="100%" id="articles">
+			
+		</table>
+		<table id="total"> </table>
+		<p><%= f.submit "Passer la commande" %></p>
+		<%end %>
+	</div>
+
+<% end %>
+

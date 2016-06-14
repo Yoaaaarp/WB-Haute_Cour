@@ -1,11 +1,71 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  price: 1.5
-  stock: 1
-  capacity: 1.5
+  id: 1
+  price: 10.30
+  stock: 1000
+  capacity: 70
+  wine_id: 1
 
 two:
-  price: 1.5
-  stock: 1
-  capacity: 1.5
+  id: 2
+  price: 7.50
+  stock: 500
+  capacity: 50
+  wine_id: 1
+
+three:
+  id: 3
+  price: 9.80
+  stock: 100
+  capacity: 70
+  wine_id: 2
+
+four:
+  id: 4
+  price: 6.50
+  stock: 30
+  capacity: 50
+  wine_id: 2
+
+five:
+  id: 5
+  price: 13.00
+  stock: 35
+  capacity: 70
+  wine_id: 3
+
+six:
+  id: 6
+  price: 10.50
+  stock: 25
+  capacity: 50
+  wine_id: 3
+
+seven:
+  id: 7
+  price: 12.50
+  stock: 80
+  capacity: 70
+  wine_id: 4
+
+eight:
+  id: 8
+  price: 9.80
+  stock: 45
+  capacity: 50
+  wine_id: 4
+
+nine:
+  id: 9
+  price: 9.50
+  stock: 20
+  capacity: 70
+  wine_id: 5
+
+then:
+  id: 10
+  price: 7
+  stock: 40
+  capacity: 50
+  wine_id: 5

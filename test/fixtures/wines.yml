@@ -1,15 +1,46 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  desc: MyString
-  vineyard: MyString
-  grape: MyString
-  image: MyString
+  id: 1
+  name: Mont
+  desc: Ce Chasselas est rond avec une relative douceur, présente un bouquet floral et une finale typique de son terroir, avec une très légère amertume.#jesuisleonard
+  vineyard: Mont-sur-Rolle
+  grape: Chasselas
+  image: mont.jpg
+  category_id: 2
 
 two:
-  name: MyString
-  desc: MyString
-  vineyard: MyString
-  grape: MyString
-  image: MyString
+  id: 2
+  name: Coudrillon
+  desc: A boire très frais sinon c'est pas bon
+  vineyard: Saint-livres
+  grape: Gamay
+  image: coudrillon.jpg
+  category_id: 3
+
+three:
+  id: 3
+  name: Gamay
+  desc: Un vin pour toute occasion, il conviendra parfaitement pour l'apéro ou pour accompagner le repas.
+  vineyard: Saint-livres
+  grape: Gamay
+  image: gamay.jpg
+  category_id: 1
+
+four:
+  id: 4
+  name: Pinot Noir
+  desc: c'est trop bon
+  vineyard: Saint-Livres
+  grape: Pinot Noir
+  image: pinot_noir.jpg
+  category_id: 1
+
+five:
+  id: 5
+  name: Saint Livres
+  desc: Ce chasselas tire ses saveures de son terroire exceptionnel situés dans les côtes du vallon de l'Aubonne.
+  vineyard: Saint-Livres
+  grape: Chasselas
+  image: saint_livres.jpg
+  category_id: 2 

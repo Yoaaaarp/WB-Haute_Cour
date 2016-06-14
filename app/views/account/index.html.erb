@@ -5,7 +5,7 @@
 		<h2>Liste des commandes </h2>
 		<br/>
 		<br/>
-		<table border=2>
+		<table>
       		<thead>
         		<tr>
           			<th>Id</th>
@@ -18,9 +18,9 @@
         	<% @orders.each do |order| %>
           		<tr>
             		<td><%= order.id %></td>
-            		<td><%= order.total_price %></td>
+            		<td><%= order.total_price %> CHF</td>
             		<td><%= order.status.name %></td>
-            		<td><%= link_to 'Afficher détails', wine %></td>
+            		<td><%= link_to 'Afficher détails', order %></td>
           		</tr>
         	<% end %>
       		</tbody>
