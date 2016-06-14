@@ -61,6 +61,27 @@ class OrdersController < ApplicationController
     end
   end
 
+  def submit_order
+    user = User.find(session[:user_id])
+    order = Order.new
+    order.user = user
+    order.status = Status.find(1)
+    if order.save
+      params[:link].each do |id|
+        
+        link = Link.find(id)
+
+        Link.update(id, :bottle => link.bottle, :order => order )
+      end
+      respond_to do | format |
+        format.js {render "update_link"}
+      end
+    end
+
+
+
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_order

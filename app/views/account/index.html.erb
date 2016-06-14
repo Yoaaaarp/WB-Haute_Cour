@@ -1,0 +1,29 @@
+<%= render "layouts/account_menu" %>
+
+<div id="conteneur_intermediaire_right">
+	<div class="article">
+		<h2>Liste des commandes </h2>
+		<br/>
+		<br/>
+		<table border=2>
+      		<thead>
+        		<tr>
+          			<th>Id</th>
+          			<th>Prix total</th>
+          			<th>Status</th>
+          			<th colspan="1"></th>
+        		</tr>
+      		</thead>
+			<tbody>
+        	<% @orders.each do |order| %>
+          		<tr>
+            		<td><%= order.id %></td>
+            		<td><%= order.total_price %></td>
+            		<td><%= order.status.name %></td>
+            		<td><%= link_to 'Afficher détails', wine %></td>
+          		</tr>
+        	<% end %>
+      		</tbody>
+    	</table>
+	</div>
+</div>

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'account/index'
+
   resources :users
   #get 'session/new'
 
@@ -34,7 +36,14 @@ Rails.application.routes.draw do
     end
   end
   resources :statuses
-  resources :orders
+  resources :orders do
+    collection do
+      post :submit_order
+    end
+  end
+
+
+
   resources :events
   resources :addresses
   resources :users

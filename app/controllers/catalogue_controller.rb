@@ -2,7 +2,7 @@ class CatalogueController < ApplicationController
   def index
   	@bottles = Bottle.all
   	@wines = Wine.all
-  	@link = Link.new
+  	@order = Order.new
   end
 
   def creer_link
@@ -11,6 +11,8 @@ class CatalogueController < ApplicationController
     link.bottle = @bottle
     link.save
   end
+
+
 
   private
   def link_params
