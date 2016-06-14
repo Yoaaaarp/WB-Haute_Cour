@@ -55,8 +55,8 @@ input#user, input#email, input#telephone {
 	width:200px;
 	}
 
-input.commande {
-	width:20px;
+input.price {
+	width:25px;
 	text-align:right;
 	}
 
@@ -166,7 +166,7 @@ div#conteneur_fullsize{
 
 div#conteneur_intermediaire{
 	float:left;
-	width:80%;
+	width:75%;
 	margin-right: 10px;
 }
 
@@ -223,7 +223,7 @@ div.quantite {
 
 div#panier {
 	float:left;
-	width:148px;
+	width:23%;
 	background-color:#eee;
 	border-radius:5px;
 	}

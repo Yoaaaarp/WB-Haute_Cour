@@ -71,10 +71,15 @@ class BottlesController < ApplicationController
     puts"#{link_params}"
     puts"**********************************"
     @bottle = Bottle.find(params[:id])
-    link = Link.new(link_params)
-    link.bottle = @bottle
-    link.save
-    redirect_to catalogue_path
+    @link = Link.new(link_params)
+    @link.bottle = @bottle
+    if @link.save
+      puts "ajout à la liste"
+      respond_to do | format |
+        format.js {render 'create_link'}
+      end
+    end
+    #redirect_to "/catalogue/index"
   end
 
   private

@@ -15,7 +15,7 @@
 		      		<p> avant </p>
 		      		<% if bottle.wine.id == wine.id %>
 		      		<p> pendant</p>
-		      			<%= form_for :link, :url => creer_link_bottle_path(bottle), :method => :post do |f| %>
+		      			<%= form_for :link, :remote=>true , :url => creer_link_bottle_path(bottle), :method => :post do |f| %>
 		      				<div class="quantite">
 			      				<%= image_tag 'contenance.png', :class=>'icone' %><%= bottle.capacity%> cl - <%= bottle.price %> CHF
 				      			<%= f.number_field :number, :class=>'quantite' %>
@@ -33,20 +33,8 @@
 <div id="panier">
 	<h2>Panier</h2>
 	<table width="100%" id="articles">
-		<tr>
-		<td class="nom"><p>Article 1</p></td>
-		<td class="quantite"><input type="text" class="commande" value="1" /></td>
-		</tr>
-
-		<tr>
-		<td class="nom"><p>Article 2</p></td>
-		<td class="quantite"><input type="text" class="commande" value="1" /></td>
-		</tr>
-
-		<tr>
-		<td class="nom"><p>Article 3</p></td>
-		<td class="quantite"><input type="text" class="commande" value="1" /></td>
-		</tr>
+		
 	</table>
+	<table id="total"> </table>
 	<p><a class="lien" href="#">Passer la commande</a></p>
 </div>
