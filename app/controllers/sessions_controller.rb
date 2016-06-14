@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
   	if user and user.authenticate(params[:session][:password])
   		session[:user_id] = user.id
   		session[:admin] = user.admin
-  		redirect_to user_url(user.id)
+  		redirect_to "/"
   	else
   		redirect_to login_sessions_url alert:"Invalid Username or Password"
   	end

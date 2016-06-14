@@ -12,9 +12,7 @@
 		      	<p><strong>DESCRIPTION</strong><br/><%= wine.desc %></p>
 		      	<br/>
 		      	<% @bottles.each do |bottle| %>
-		      		<p> avant </p>
 		      		<% if bottle.wine.id == wine.id %>
-		      		<p> pendant</p>
 		      			<%= form_for :link, :url => creer_link_bottle_path(bottle), :method => :post do |f| %>
 		      				<div class="quantite">
 			      				<%= image_tag 'contenance.png', :class=>'icone' %><%= bottle.capacity%> cl - <%= bottle.price %> CHF
@@ -23,7 +21,6 @@
 		      				</div>
 		      			<% end %>
 		      		<% end %>
-		      		<p> après </p>
 		      	<% end %>
 		    </div>
 		</div>

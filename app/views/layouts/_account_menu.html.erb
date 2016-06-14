@@ -1,0 +1,5 @@
+<div id="gestion">
+	<h3>Gestion de compte</h3>
+	<p><%= link_to 'Editer informations', edit_user_url(session[:user_id]) %></p>
+	<p><%= link_to 'Commandes', {:controller => :account} %></p>
+</div>

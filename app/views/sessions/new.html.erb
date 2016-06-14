@@ -1,18 +1,22 @@
-<div>
+<div id="conteneur_fullsize">
 <%if flash[:alert] %>
 <p id ="notice" > <%= flash[:alert] %> </p>
 <%end %>
-<div class="col-md-6 col-md-offset-3">
+<div class="article">
     <%= form_for(:session, url: login_sessions_path) do |f| %>
-
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control' %>
-
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
-
-      <%= f.submit "Log in", class: "btn btn-primary" %>
+    	<center>
+    	<div class="field">
+      		<%= f.label :Nom %><br/>
+      		<%= f.text_field :name, class: 'form-control' %>
+      	</div>
+      	<div class="field">
+      		<%= f.label :"Mot de passe" %><br/>
+      		<%= f.password_field :password, class: 'form-control' %>
+      	</div>
+      	<div class="field">
+      		<%= f.submit "Connexion", class: "btn btn-primary" %>
+      	</div>
+      	</center>
     <% end %>
-
-    
   </div>
+</div>

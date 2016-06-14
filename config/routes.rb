@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'account/index'
+
   resources :users
   #get 'session/new'
 
